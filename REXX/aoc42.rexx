@@ -11,22 +11,23 @@ do i = 1 to kaarten.0
 end
 
 do i = 1 to invoer.0
- say invoer.i
  do b = 1 to kaarten.i
-   parse var invoer.i 'Card' nummer ':' winning '|' trekking
-   mijn_getallen.0 = 0
-   balnr = 0
-   do while trekking <> ""
-      parse var trekking getal trekking
-      balnr = balnr + 1
-      mijn_getallen.balnr = getal
-      mijn_getallen.0 = balnr
-   end
-   winnaars = 0
-   do k = 1 to mijn_getallen.0
-      if wordpos(mijn_getallen.k, winning) > 0 then do
-         winnaars = winnaars + 1
-      end
+   if b = 1 then do
+     parse var invoer.i 'Card' nummer ':' winning '|' trekking
+     mijn_getallen.0 = 0
+     balnr = 0
+     do while trekking <> ""
+        parse var trekking getal trekking
+        balnr = balnr + 1
+        mijn_getallen.balnr = getal
+        mijn_getallen.0 = balnr
+     end
+     winnaars = 0
+     do k = 1 to mijn_getallen.0
+        if wordpos(mijn_getallen.k, winning) > 0 then do
+           winnaars = winnaars + 1
+        end
+     end
    end
    do l = 1 to winnaars
       nummer = i + l
