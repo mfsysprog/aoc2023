@@ -1,6 +1,7 @@
 /* rexx */
 address tso "alloc da(aoc.input1) dd(aoc1) shr"
 address tso "execio * diskr aoc1 (open stem invoer. finis"
+address tso "free dd(aoc1)"
 
 totaal = 0
 uitvoer.0 = invoer.0

@@ -1,6 +1,7 @@
 /* rexx */
 address tso "alloc da(aoc.input5) dd(aoc5) shr"
 address tso "execio * diskr aoc5 (open stem invoer. finis"
+address tso "free dd(aoc5)"
 
 numeric digits 14
 
