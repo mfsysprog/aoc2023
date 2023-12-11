@@ -1,5 +1,5 @@
 /* rexx  */
-address tso "alloc da(aoc.input8) dd(aoc8) shr"
+address tso "alloc da(aoc.input8hk) dd(aoc8) shr"
 address tso "execio * diskr aoc8 (open stem invoer. finis"
 address tso "free dd(aoc8)"
 
